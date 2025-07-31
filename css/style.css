@@ -428,8 +428,9 @@ mark,
     content: "\2014 \00A0"; }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto; }
+  width: 100%;
+  height: 250px !important; /* override */
+}
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -7935,6 +7936,7 @@ header {
       margin-bottom: 30px; } }
   .link-thumbnail img {
     position: relative;
+    height: 300px;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease; }
@@ -8347,7 +8349,7 @@ header {
 
     /* col-md-4 üzerindeki inline padding'i kaldırıp CSS'e taşıyalım */
     .col-md-4.element-animate {
-      padding: 10px;
+      padding: 20px;
     }
 
     /* no-gutters sınıfına rağmen eklenen padding'i dengelemek için */
@@ -8355,3 +8357,60 @@ header {
       margin-right: -10px;
       margin-left: -10px;
     }
+
+    .more-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  background-color: #fd7e14;;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 2;
+}
+.more-btn:hover {
+  background-color: #fd7e14;
+}
+
+.btn-back {
+  position: absolute;
+  top: 10px; /* İstersen azaltabilirsin */
+  left: 10px;
+  z-index: 10;
+  background-color: #fd5f00;
+  border-color: #fd5f00;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #e65400;
+  border-color: #e65400;
+}
+
+.text {
+  position: relative;
+  padding-top: 40px; /* Butonun kapladığı alan kadar boşluk bırak */
+}
+
+@media (max-width: 576px) {
+  .btn-back {
+    top: 5px;
+    left: 5px;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .text {
+    padding-top: 45px;
+  }
+}
