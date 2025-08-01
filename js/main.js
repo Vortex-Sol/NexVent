@@ -32,33 +32,32 @@
 	  console.log('show');
 	});
 
-	// home slider
-	$('.home-slider').owlCarousel({
-    loop:true,
-    autoplay: true,
-    margin:0,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav:true,
-    autoplayHoverPause: true,
-    items: 1,
-    dragTouch: false,
-    navText : ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
-    responsive:{
-      0:{
-        items:1,
-        nav:false
-      },
-      600:{
-        items:1,
-        nav:false
-      },
-      1000:{
-        items:1,
-        nav:true
-      }
+$('.home-slider').owlCarousel({
+  loop: false,          // döngüyü kapat
+  autoplay: false,      // otomatik kaydırmayı kapat
+  margin: 0,
+  nav: true,
+  autoplayHoverPause: false,
+  items: 1,
+  mouseDrag: false,     // fare ile sürüklemeyi kapat
+  touchDrag: false,     // dokunmatik sürüklemeyi kapat
+  pullDrag: false,      // çekiş sürüklemeyi kapat
+  navText: ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
+  responsive: {
+    0: {
+      items: 1,
+      nav: false
+    },
+    600: {
+      items: 1,
+      nav: false
+    },
+    1000: {
+      items: 1,
+      nav: true
     }
-	});
+  }
+});
 
   $('.nonloop-block-11').owlCarousel({
       center: false,

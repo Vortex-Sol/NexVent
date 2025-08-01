@@ -8419,3 +8419,13 @@ header {
   border-top: 2px solid #333; /* Daha koyu ve kalın */
   padding-top: 40px;
 }
+
+.home-slider.no-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-slider.no-carousel .slider-item {
+  display: block;
+  width: 100%;
+}
