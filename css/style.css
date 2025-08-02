@@ -8435,3 +8435,39 @@ header {
   align-items: center;
   padding-left: 10px;
 }
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #fd7e14;
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 50px;
+  transition: background-color 0.3s ease;
+}
+
+#backToTopBtn:hover {
+  background-color: #e96d0f;
+}
+
+
+/* SADECE mobil cihazlarda scroll sonrası görünür */
+@media (max-width: 768px) {
+  body.scrolled #backToTopBtn {
+    display: block;
+  }
+}
+
+

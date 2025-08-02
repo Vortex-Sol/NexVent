@@ -185,6 +185,30 @@ $('.home-slider').owlCarousel({
     location.href = this.href;
   });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var backToTopBtn = document.getElementById("backToTopBtn");
+
+  if (!backToTopBtn) return; // Buton bulunamazsa çık
+
+  window.addEventListener("scroll", function () {
+    if (
+      window.innerWidth <= 768 &&
+      (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+    ) {
+      document.body.classList.add("scrolled");
+    } else {
+      document.body.classList.remove("scrolled");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+
 
 
 })(jQuery);
