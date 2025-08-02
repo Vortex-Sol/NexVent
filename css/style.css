@@ -8429,3 +8429,9 @@ header {
   display: block;
   width: 100%;
 }
+
+.gtranslate_wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
