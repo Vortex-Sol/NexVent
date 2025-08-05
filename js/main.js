@@ -144,25 +144,6 @@ $('.home-slider').owlCarousel({
   	}
 	});
 
-    function switchLanguage(lang) {
-    const filename = location.pathname.split('/').pop(); // örn: about.html
-    window.location.href = `/NexVent/${lang}-html/${filename}`;
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const flagImg = document.getElementById('flagImg');
-    if (flagImg) {
-      const path = window.location.pathname;
-      if (path.includes('/tr-html/')) {
-        flagImg.src = '/NexVent/tr-html/images/tr.png';
-      } else if (path.includes('/pl-html/')) {
-        flagImg.src = '/NexVent/pl-html/images/pl.png';
-      } else {
-        flagImg.src = '/NexVent/en-html/images/usa.png';
-      }
-    }
-  });
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.element-animate').waypoint( function( direction ) {
